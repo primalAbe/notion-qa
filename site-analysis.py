@@ -1,4 +1,3 @@
-"""This is the logic for ingesting Notion data into LangChain."""
 from pathlib import Path
 from langchain.text_splitter import CharacterTextSplitter
 import faiss
@@ -10,7 +9,6 @@ import os
 os.environ["OPENAI_API_KEY"] = '[OPENAI_API_KEY]'
 
 # Here we load in the data in the format that Notion exports it in.
-ps = list(Path("Notion_DB/").glob("**/*.md"))
 
 data = []
 sources = []

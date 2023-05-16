@@ -49,11 +49,11 @@ Note that when setting up your StreamLit app you should make sure to add `OPENAI
 
 Export your dataset from Notion. You can do this by clicking on the three dots in the upper right hand corner and then clicking `Export`.
 
-<img src="export_notion.png" alt="export" width="200"/>
+<img src="assets/export_notion.png" alt="export" width="200"/>
 
 When exporting, make sure to select the `Markdown & CSV` format option.
 
-<img src="export_format.png" alt="export-format" width="200"/>
+<img src="assets/export_format.png" alt="export-format" width="200"/>
 
 This will produce a `.zip` file in your Downloads folder. Move the `.zip` file into this repository.
 
@@ -74,3 +74,11 @@ Boom! Now you're done, and you can ask it questions like:
 ```shell
 python qa.py "What is the work from home policy"
 ```
+
+
+
+Important to do: 
+- https://github.com/microsoft/playwright-python/issues/178#issuecomment-1302869947
+    - basically, comment out line 637 and add a print statement below it
+- had to change C:\Users\af_is\miniconda3\envs\langchain\Lib\site-packages\pandas\core\indexers\utils.py:(24:13)
+    - from `ABCIndex` to `ABCIndexClass`
